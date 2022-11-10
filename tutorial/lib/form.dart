@@ -278,6 +278,10 @@ class _MyFormPageState extends State<MyFormPage> {
                                         Text('Jenjang: Doktor'),
                                       Text('Umur: ' + umur.toInt().toString()),
                                       Text('Kelas: ' + kelasPBP),
+                                      if (_nilaiSwitch == true)
+                                        Text('Practice Mode ON')
+                                      else
+                                        Text('Practice Mode OFF')
                                     ],
                                   ),
                                   // TODO: Munculkan informasi yang didapat dari form
