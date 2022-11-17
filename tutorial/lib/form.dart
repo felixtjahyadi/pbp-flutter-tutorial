@@ -1,5 +1,7 @@
-import 'package:tutorial/main.dart';
+import 'package:tutorial/page/main.dart';
 import 'package:flutter/material.dart';
+import 'package:tutorial/model/to_do.dart';
+import 'package:tutorial/page/to_do_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -73,6 +75,16 @@ class _MyFormPageState extends State<MyFormPage> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const MyFormPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('To Do'),
+              onTap: () {
+                // Route menu ke halaman to do
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ToDoPage()),
                 );
               },
             ),
